@@ -1,0 +1,19 @@
+generated: '2026-07-19'
+method: searched
+source: live probes of /.well-known/ on Enverus hosts
+note: >-
+  No /.well-known/ discovery documents were served on the probed hosts. Absence
+  is valid, recorded data.
+hosts:
+- host: https://www.enverus.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+- host: https://api.enverus.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 502
+- host: https://di-api.drillinginfo.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 502

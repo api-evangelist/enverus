@@ -1,0 +1,23 @@
+generated: '2026-07-19'
+method: searched
+source: https://pypi.org/project/directaccess/
+api: Enverus DirectAccess API
+note: >-
+  Lifecycle facts captured from the documented DirectAccess API behavior. No
+  public status page (status.enverus.com does not resolve) and no public
+  deprecation-policy page were found, so StatusPage and Deprecation canonical
+  pointers are intentionally not emitted.
+versioning:
+  scheme: uri-path
+  current: v2
+deprecation:
+  observed: true
+  detail: >-
+    DirectAccess API version 1 has been deprecated and removed; version 2 is the
+    current supported version. No formal published deprecation-policy page or
+    RFC 8594 Sunset-header support was located.
+  removed_versions:
+  - v1
+status_page: null
+sla: null
+deprecated_operations: []

@@ -1,0 +1,22 @@
+generated: '2026-07-19'
+method: searched
+source: https://pypi.org/project/directaccess/
+note: >-
+  Enverus does not publish a first-party client library on the public package
+  registries. The most widely used client for the DirectAccess API is the
+  community-maintained "directaccess" Python wrapper (MIT, by Cole Howard /
+  wchatx). It is NOT first-party, so official is false and no SDKs pointer is
+  emitted for the provider.
+packages:
+- language: python
+  registry: pypi
+  name: directaccess
+  version: 1.5.2
+  url: https://pypi.org/project/directaccess/
+  source: https://github.com/wchatx/direct-access-py
+  install: pip install directaccess
+  official: false
+  description: >-
+    A thin community wrapper around Enverus (Drillinginfo) DirectAccess API v2.
+    Handles token authentication and management, pagination, and network-related
+    error handling / retries.

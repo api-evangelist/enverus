@@ -1,0 +1,23 @@
+generated: '2026-07-19'
+method: derived
+source: authentication/enverus-authentication.yml
+note: >-
+  Cross-cutting standards conformance derived from the documented DirectAccess
+  API v2 authentication and conventions. No published compliance program or
+  certifications (SOC 2 / ISO 27001 / etc.) were located on a public trust or
+  security page, so no Compliance pointer is emitted.
+standards:
+- id: oauth2-client-credentials
+  conforms: true
+  evidence: >-
+    client_id/client_secret exchanged at a token endpoint for a bearer access
+    token (client_credentials-style grant).
+- id: bearer-token-rfc6750
+  conforms: true
+  evidence: access token presented as Authorization Bearer header.
+- id: rfc9457-problem-details
+  conforms: false
+  evidence: no application/problem+json error envelope documented.
+- id: openapi-published
+  conforms: false
+  evidence: API explorer and specs are gated behind login; no public OpenAPI.

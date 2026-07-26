@@ -1,0 +1,62 @@
+generated: '2026-07-19'
+method: searched
+source: https://app.enverus.com/direct/#/api/explorer/v2/gettingStarted
+docs: https://app.enverus.com/direct/#/api/explorer/v2/gettingStarted
+api: Enverus DirectAccess API v2
+note: >-
+  Cross-cutting request/response semantics for the DirectAccess API v2, captured
+  from the documented behavior and the community directaccess client. No public
+  OpenAPI exists, so semantics are documented rather than derived from a spec.
+authentication:
+  style: bearer-token
+  detail: >-
+    API key (X-Api-Key header) + client_id/client_secret exchanged for a
+    short-lived bearer access token. See authentication/enverus-authentication.yml.
+versioning:
+  scheme: uri-path
+  current: v2
+  detail: >-
+    Version is carried in the URL path (/v2/direct-access/...). Version 1 has
+    been deprecated and removed. See lifecycle/enverus-lifecycle.yml.
+pagination:
+  style: cursor
+  params:
+  - pagesize
+  detail: >-
+    Results are paged; pagesize controls page size (up to a documented maximum,
+    e.g. 10000). The client follows the server-provided next-page link/cursor
+    until the result set is exhausted.
+filtering:
+  style: filter-functions
+  detail: >-
+    Query parameters accept server-side filter functions passed as string
+    values on the field name.
+  functions:
+  - gt   # greater than, e.g. updateddate='gt(2018-08-01)'
+  - ge   # greater than or equal
+  - lt   # less than
+  - le   # less than or equal
+  - btw  # between two values, e.g. approveddate='btw(2018-03-01,2018-06-01)'
+  - 'null'      # field is null, e.g. deleteddate='null'
+  - not(null)   # field is not null
+  escaping: >-
+    Literal commas inside values are escaped with a backslash
+    (e.g. 'PERCUSSION PETROLEUM OPERATING\, LLC').
+field_selection:
+  param: fields
+  detail: >-
+    A comma-separated fields parameter limits the columns returned
+    (e.g. fields='DrillType,LeaseName,PermitDepth').
+idempotency:
+  supported: false
+  detail: >-
+    The DirectAccess API is a read/query API (GET); no idempotency-key contract
+    is documented.
+retries:
+  detail: >-
+    Clients are expected to handle transient network errors with retries and
+    exponential backoff; the reference client exposes retries and backoff_factor.
+error_envelope:
+  detail: >-
+    Standard HTTP status codes signal outcomes; the token endpoint requires POST
+    (GET returns 405 Method Not Allowed).
