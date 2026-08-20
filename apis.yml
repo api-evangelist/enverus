@@ -42,6 +42,17 @@ tags:
 - Analytics
 - Market Intelligence
 - Well Data
+- Software-as-a-Service
+- Direct Access
+- Trading and Risk
+tags_raw:
+- Company
+- Energy
+- Oil and Gas
+- Energy Data
+- Analytics
+- Market Intelligence
+- Well Data
 - SaaS
 - DirectAccess
 - Trading and Risk
@@ -56,6 +67,11 @@ apis:
   humanURL: https://app.enverus.com/direct/#/api/explorer/v2/gettingStarted
   baseURL: https://di-api.drillinginfo.com/v2/direct-access
   tags:
+  - Energy Data
+  - Well Data
+  - Oil and Gas
+  - Direct Access
+  tags_raw:
   - Energy Data
   - Well Data
   - Oil and Gas
