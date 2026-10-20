@@ -50,6 +50,11 @@ tags:
 - Software-as-a-Service
 - Direct Access
 - Trading and Risk
+- Data
+- Geospatial
+- Developer API
+- Production Data
+- Energy Intelligence
 tags_raw:
 - Company
 - Energy
@@ -61,6 +66,11 @@ tags_raw:
 - SaaS
 - DirectAccess
 - Trading and Risk
+- Data
+- Geospatial
+- Developer API
+- Production Data
+- Energy Intelligence
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
@@ -107,6 +117,14 @@ common:
   url: conformance/enverus-conformance.yml
 - type: WellKnown
   url: well-known/enverus-well-known.yml
+- type: DeveloperPortal
+  url: https://developer.drillinginfo.com/
+- type: Documentation
+  url: https://app.enverus.com/direct/#/api/explorer/v3/gettingStarted
+- type: APIReference
+  url: https://app.enverus.com/direct/#/api/explorer/v3/gettingStarted
+- type: GitHubOrganization
+  url: https://github.com/enverus-ea
 apis:
 - name: Enverus DirectAccess API
   description: Token-authenticated REST API (v2) for bulk programmatic access to Enverus' energy datasets — well origins, rigs, permits, producing entities,
@@ -134,6 +152,21 @@ apis:
   - type: Conformance
     url: conformance/enverus-conformance.yml
   aid: enverus:enverus-directaccess-api
+- name: Enverus Developer API (v3)
+  description: Current version of the Enverus Developer API (formerly Drillinginfo Direct Access). Read-only
+    JSON access to energy datasets — wells, well-origins, wellbores, production, completions, permits,
+    rigs, casings, legal-leases and producing-entities — authenticated with a secret key that is exchanged
+    for a bearer token. Paginates via Link headers.
+  humanURL: https://app.enverus.com/direct/#/api/explorer/v3/gettingStarted
+  baseURL: https://api.enverus.com/v3/direct-access/
+  tags:
+  - Energy
+  - Oil and Gas
+  - Well Data
+  - Production Data
+  properties:
+  - type: Documentation
+    url: https://app.enverus.com/direct/#/api/explorer/v3/gettingStarted
 x-enrichment:
   date: '2026-10-20'
   status: nochange
