@@ -1,16 +1,10 @@
 aid: enverus
 name: Enverus
-description: >-
-  Enverus is an energy-dedicated SaaS company providing analytics, market
-  intelligence, and workflow automation across the global energy value chain —
-  oil and gas, power and renewables, minerals, midstream, trading and risk, and
-  financial services. Its developer surface is the Enverus DirectAccess API
-  (formerly Drillinginfo DirectAccess), a token-authenticated REST API that
-  delivers bulk access to Enverus' energy datasets — well origins, rigs,
-  permits, producing entities, production, and related upstream data — with
-  server-side filter functions, field selection, and cursor-based pagination.
-  Enverus serves 8,000+ companies and 35,000+ energy customers from its Austin,
-  Texas headquarters.
+description: Enverus is an energy-dedicated SaaS company providing analytics, market intelligence, and workflow automation across the global energy value
+  chain — oil and gas, power and renewables, minerals, midstream, trading and risk, and financial services. Its developer surface is the Enverus DirectAccess
+  API (formerly Drillinginfo DirectAccess), a token-authenticated REST API that delivers bulk access to Enverus' energy datasets — well origins, rigs, permits,
+  producing entities, production, and related upstream data — with server-side filter functions, field selection, and cursor-based pagination. Enverus serves
+  8,000+ companies and 35,000+ energy customers from its Austin, Texas headquarters.
 url: https://raw.githubusercontent.com/api-evangelist/enverus/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -67,41 +61,20 @@ tags_raw:
 - SaaS
 - DirectAccess
 - Trading and Risk
-apis:
-- name: Enverus DirectAccess API
-  description: >-
-    Token-authenticated REST API (v2) for bulk programmatic access to Enverus'
-    energy datasets — well origins, rigs, permits, producing entities, and
-    production. Authenticate with an API key plus client credentials to obtain a
-    bearer access token, then query datasets with server-side filter functions
-    (gt/lt/btw/null), field selection, and pagination.
-  humanURL: https://app.enverus.com/direct/#/api/explorer/v2/gettingStarted
-  baseURL: https://di-api.drillinginfo.com/v2/direct-access
-  tags:
-  - Energy Data
-  - Well Data
-  - Oil and Gas
-  - Direct Access
-  tags_raw:
-  - Energy Data
-  - Well Data
-  - Oil and Gas
-  - DirectAccess
-  properties:
-  - type: Authentication
-    url: authentication/enverus-authentication.yml
-  - type: Conventions
-    url: conventions/enverus-conventions.yml
-  - type: Lifecycle
-    url: lifecycle/enverus-lifecycle.yml
-  - type: Conformance
-    url: conformance/enverus-conformance.yml
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: LLMsTxt
+  url: llms/enverus-llms.txt
+- type: Deprecation
+  url: lifecycle/enverus-lifecycle.yml
+- type: Hosts
+  url: hosts/enverus-hosts.yml
+- type: Vendors
+  url: vendors/enverus-vendors.yml
 - type: DomainSecurity
   url: security/enverus-domain-security.yml
 - type: Website
@@ -124,10 +97,6 @@ common:
   url: https://www.enverus.com/privacy-policy/
 - type: GitHubOrganization
   url: https://github.com/enverus
-- type: LLMsTxt
-  url: llms/enverus-llms.txt
-- type: Packages
-  url: packages/enverus-packages.yml
 - type: Authentication
   url: authentication/enverus-authentication.yml
 - type: Conventions
@@ -138,8 +107,48 @@ common:
   url: conformance/enverus-conformance.yml
 - type: WellKnown
   url: well-known/enverus-well-known.yml
+apis:
+- name: Enverus DirectAccess API
+  description: Token-authenticated REST API (v2) for bulk programmatic access to Enverus' energy datasets — well origins, rigs, permits, producing entities,
+    and production. Authenticate with an API key plus client credentials to obtain a bearer access token, then query datasets with server-side filter functions
+    (gt/lt/btw/null), field selection, and pagination.
+  humanURL: https://app.enverus.com/direct/#/api/explorer/v2/gettingStarted
+  baseURL: https://di-api.drillinginfo.com/v2/direct-access
+  tags:
+  - Energy Data
+  - Well Data
+  - Oil and Gas
+  - Direct Access
+  tags_raw:
+  - Energy Data
+  - Well Data
+  - Oil and Gas
+  - DirectAccess
+  properties:
+  - type: Authentication
+    url: authentication/enverus-authentication.yml
+  - type: Conventions
+    url: conventions/enverus-conventions.yml
+  - type: Lifecycle
+    url: lifecycle/enverus-lifecycle.yml
+  - type: Conformance
+    url: conformance/enverus-conformance.yml
+  aid: enverus:enverus-directaccess-api
 x-enrichment:
-  date: '2026-07-19'
-  status: backfilled
-  pass: local-v1
-  note: backfilled from .gitignore signal + verified work evidence
+  date: '2026-10-20'
+  status: nochange
+  artifacts_added: 0
+  pass: local-v5
+x-coverage:
+  state: gated
+  reason: customer-only-docs
+  detail: The DirectAccess API explorer at app.enverus.com/direct/ 302s to an Auth0 login at login.auth.enverus.com, and the API host serves no public OpenAPI
+    (openapi.json/swagger.json return 502).
+  evidence:
+  - url: https://app.enverus.com/direct/
+    status: 302
+  - url: https://di-api.drillinginfo.com/v2/direct-access/openapi.json
+    status: 502
+  - url: https://app.enverus.com/mcp
+    status: 401
+  checked: '2026-10-20'
