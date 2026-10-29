@@ -64,6 +64,91 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Enverus is a company surfaced as a portfolio company of insight-partners and added to the API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+Enverus is an energy-dedicated SaaS company providing analytics, market intelligence, and workflow automation across the global energy value chain — oil and gas, power and renewables, minerals, midstream, trading and risk, and financial services. Its developer surface is the Enverus DirectAccess API (formerly Drillinginfo DirectAccess), a token-authenticated REST API that delivers bulk access to Enverus' energy datasets — well origins, rigs, permits, producing entities, production, and related upstream data — with server-side filter functions, field selection, and cursor-based pagination. Enverus serves 8,000+ companies and 35,000+ energy customers from its Austin, Texas headquarters.
 
-Backed by: insight-partners — https://www.enverus.com/
+**Areas:** Company · Energy · Oil and Gas · Energy Data · Analytics · Market Intelligence · Well Data · Software-as-a-Service · Direct Access · Trading and Risk
+
+## Enverus on APIs.io
+
+Everything profiled for Enverus is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/enverus/](https://apis.io/providers/enverus/)** — or go straight to one of the APIs or properties below.
+
+### APIs (1)
+
+- [Enverus DirectAccess API](https://apis.io/apis/enverus/enverus-directaccess-api/) — Token-authenticated REST API (v2) for bulk programmatic access to Enverus' energy datasets — well origins, rigs, permits, producing entities, and…
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### Security (2)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Enverus Authentication](https://apis.io/security/enverus/enverus-authentication/)
+- [Enverus Domain Security](https://apis.io/security/enverus/enverus-domain-security/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.enverus.com/)
+- [Documentation](https://app.enverus.com/direct/#/api/explorer/v2/gettingStarted)
+- [Getting started](https://app.enverus.com/direct/#/api/explorer/v2/gettingStarted)
+- [Support](https://www.enverus.com/contact-us/)
+- [Blog](https://www.enverus.com/blog/)
+- [Terms of service](https://www.enverus.com/terms-conditions/)
+- [Privacy policy](https://www.enverus.com/privacy-policy/)
+- [GitHub](https://github.com/enverus)
+
+## API Evangelist rating
+
+**Kin Score 22.7** — emerging · rubric 0.24.0 · scored 2026-10-20
+
+| Facet | Score |
+|---|---|
+| Discoverability | 73.2 |
+| Contract quality | 0.0 |
+| Contract governance | 4.5 |
+| Operational transparency | 10.5 |
+| Developer ergonomics | 34.5 |
+| Access clarity | 27.6 |
+
+**Agent readiness 2.5** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 20.5** — Energy & Utilities
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/enverus/](https://apis.io/providers/enverus/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Enverus: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/enverus/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
